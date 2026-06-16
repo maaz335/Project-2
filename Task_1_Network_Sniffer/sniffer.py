@@ -14,13 +14,13 @@ if in_streamlit:
     st.set_page_config(page_title="Network Sniffer", page_icon="🌐", layout="wide")
     st.title("🌐 Task 1: Network Sniffer (Cloud Simulator)")
     
-    st.warning("🚨 **Technical Notice:** Real hardware packet sniffing requires `root`/`Administrator` access, jo cloud servers (unprivileged containers) par allow nahi hota. Isliye yeh ek **Live Simulation** hai taake aap dekh sakein sniffer kaisa lagta hai!")
+    st.warning("🚨 **Technical Notice:** Real hardware packet sniffing requires `root`/`Administrator` access, which is not allowed on cloud servers (unprivileged containers). Therefore, this is a **Live Simulation** to demonstrate how the sniffer works!")
     
     col1, col2 = st.columns([1, 2])
     
     with col1:
         st.subheader("🎛️ Controls")
-        packet_count = st.slider("Kitne packets capture karne hain?", min_value=5, max_value=50, value=15)
+        packet_count = st.slider("How many packets to capture?", min_value=5, max_value=50, value=15)
         start_sniffing = st.button("Start Sniffing 🚀", type="primary")
         
     with col2:
